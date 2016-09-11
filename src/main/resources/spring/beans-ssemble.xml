@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id="car" class="com.no.learn.spring.beanAssemble.Car">
+              <property name="brand">
+                     <value>雅阁</value>
+              </property>
+              <property name="maxSpeed">
+                     <value>120</value>
+              </property>
+              <property name="price">
+                     <value>18.5</value>
+              </property>
+       </bean>
+
+       <bean id="car1" class="com.no.learn.spring.beanAssemble.Car">
+              <constructor-arg type="java.lang.String">
+                     <value>大众</value>
+              </constructor-arg>
+              <constructor-arg type="int">
+                     <value>300</value>
+              </constructor-arg>
+       </bean>
+
+       <bean id="car2" class="com.no.learn.spring.beanAssemble.Car">
+              <constructor-arg index="0">
+                     <value>大众</value>
+              </constructor-arg>
+       </bean>
+
+       <bean id="car3" class="com.no.learn.spring.beanAssemble.Car">
+              <constructor-arg type="java.lang.String" index="0">
+                     <value>大众</value>
+              </constructor-arg>
+              <constructor-arg type="java.lang.String" index="1">
+                     <value>断轴</value>
+              </constructor-arg>
+              <constructor-arg type="int" index="2">
+                     <value>500</value>
+              </constructor-arg>
+       </bean>
+
+       <bean id="car4" class="com.no.learn.spring.beanAssemble.Car">
+              <constructor-arg type="java.lang.String" index="0">
+                     <value>大众</value>
+              </constructor-arg>
+              <constructor-arg type="java.lang.String" index="1">
+                     <value>断轴</value>
+              </constructor-arg>
+              <constructor-arg type="double" index="2">
+                     <value>14.5</value>
+              </constructor-arg>
+       </bean>
+
+       <bean id="teacher" class="com.no.learn.spring.beanAssemble.Teacher">
+              <property name="teacherName" value="longxiang.suo" />
+              <property name="cource" ref="cource" />
+       </bean>
+
+
+       <bean id="cource" class="com.no.learn.spring.beanAssemble.Cource">
+              <property name="courceName" value="Java" />
+              <property name="teacher" ref="teacher" />
+       </bean>
+
+       <bean id="cource1" class="com.no.learn.spring.beanAssemble.Cource">
+              <constructor-arg index="0" value="C++" />
+              <constructor-arg index="1" ref="teacher" />
+       </bean>
+</beans>
