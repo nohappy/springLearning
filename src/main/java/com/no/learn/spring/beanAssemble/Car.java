@@ -1,5 +1,7 @@
 package com.no.learn.spring.beanAssemble;
 
+import java.util.Map;
+
 /**
  * @author: suolongxiang  Date: 16/9/11 Time: 下午1:57
  */
@@ -9,6 +11,7 @@ public class Car {
     private int maxSpeed;
     private double price;
     private String comment;
+    private Map<String, Integer> componet;
 
     public Car() {
 
@@ -65,5 +68,13 @@ public class Car {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public Map<String, Integer> getComponet() {
+        return componet;
+    }
+
+    public void setComponet(Map<String, Integer> componet) {
+        this.componet = componet;
     }
 }

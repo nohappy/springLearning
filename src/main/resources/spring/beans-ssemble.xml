@@ -14,6 +14,18 @@
               <property name="price">
                      <value>18.5</value>
               </property>
+              <property name="componet">
+                     <map>
+                            <entry>
+                                   <key><value>方向盘</value></key>
+                                   <value>100</value>
+                            </entry>
+                            <entry>
+                                   <key><value>轮胎</value></key>
+                                   <value>800</value>
+                            </entry>
+                     </map>
+              </property>
        </bean>
 
        <bean id="car1" class="com.no.learn.spring.beanAssemble.Car">
@@ -63,11 +75,58 @@
 
        <bean id="cource" class="com.no.learn.spring.beanAssemble.Cource">
               <property name="courceName" value="Java" />
-              <property name="teacher" ref="teacher" />
+              <property name="teacher">
+                     <ref bean="teacher" />
+              </property>
        </bean>
 
        <bean id="cource1" class="com.no.learn.spring.beanAssemble.Cource">
               <constructor-arg index="0" value="C++" />
               <constructor-arg index="1" ref="teacher" />
+       </bean>
+
+       <bean id="boss" class="com.no.learn.spring.beanAssemble.Boss">
+              <property name="bossName" value="longxiang.suo" />
+              <property name="car">
+                     <bean class="com.no.learn.spring.beanAssemble.Car">
+                            <property name="brand" value="别克" />
+                            <property name="price" value="23.5" />
+                            <property name="comment">
+                                   <null />
+                            </property>
+                     </bean>
+              </property>
+       </bean>
+
+       <bean id="boss2" class="com.no.learn.spring.beanAssemble.Boss">
+              <property name="bossName" value="longxiang.suo" />
+              <property name="car.brand" value="丰田" />
+              <property name="car.maxSpeed" value="500" />
+       </bean>
+
+       <bean id="boss3" class="com.no.learn.spring.beanAssemble.Boss">
+              <property name="bossName" value="longxiang.suo" />
+              <property name="addresses">
+                     <list>
+                            <value>beijing</value>
+                            <value>dalian</value>
+                     </list>
+              </property>
+       </bean>
+
+       <bean id="boss4" class="com.no.learn.spring.beanAssemble.Boss">
+              <property name="bossName" value="longxiang.suo" />
+              <property name="addresses">
+                     <list>
+                            <value>beijing</value>
+                            <value>dalian</value>
+                     </list>
+              </property>
+              <property name="cars">
+                     <list>
+                            <ref bean="car4" />
+                            <ref bean="car1" />
+                     </list>
+              </property>
        </bean>
 </beans>

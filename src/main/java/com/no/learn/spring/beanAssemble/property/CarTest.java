@@ -1,5 +1,6 @@
 package com.no.learn.spring.beanAssemble.property;
 
+import com.no.learn.spring.beanAssemble.Boss;
 import com.no.learn.spring.beanAssemble.Car;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -20,6 +21,14 @@ public class CarTest {
         Car car3 = (Car)ctx.getBean("car3");
 
         Car car4 = (Car)ctx.getBean("car4");
+
+        Boss boss = (Boss)ctx.getBean("boss");
+
+        Boss boss2 = (Boss)ctx.getBean("boss2");
+
+        Boss boss3 = (Boss)ctx.getBean("boss3");
+
+        Boss boss4 = (Boss)ctx.getBean("boss4");
         System.err.println("121");
     }
 }
