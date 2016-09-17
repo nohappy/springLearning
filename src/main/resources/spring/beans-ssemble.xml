@@ -5,66 +5,36 @@
 	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
        <bean id="car" class="com.no.learn.spring.beanAssemble.Car">
-              <property name="brand">
-                     <value>雅阁</value>
-              </property>
-              <property name="maxSpeed">
-                     <value>120</value>
-              </property>
-              <property name="price">
-                     <value>18.5</value>
-              </property>
+              <property name="brand" value="雅阁" />
+              <property name="maxSpeed" value="120" />
+              <property name="price" value="18.5" />
               <property name="componet">
                      <map>
-                            <entry>
-                                   <key><value>方向盘</value></key>
-                                   <value>100</value>
-                            </entry>
-                            <entry>
-                                   <key><value>轮胎</value></key>
-                                   <value>800</value>
-                            </entry>
+                            <entry key="方向盘" value="100" />
+                            <entry key="轮胎" value="800" />
                      </map>
               </property>
        </bean>
 
        <bean id="car1" class="com.no.learn.spring.beanAssemble.Car">
-              <constructor-arg type="java.lang.String">
-                     <value>大众</value>
-              </constructor-arg>
-              <constructor-arg type="int">
-                     <value>300</value>
-              </constructor-arg>
+              <constructor-arg type="java.lang.String" value="大众" />
+              <constructor-arg type="int" value="300" />
        </bean>
 
        <bean id="car2" class="com.no.learn.spring.beanAssemble.Car">
-              <constructor-arg index="0">
-                     <value>大众</value>
-              </constructor-arg>
+              <constructor-arg index="0" value="大众" />
        </bean>
 
        <bean id="car3" class="com.no.learn.spring.beanAssemble.Car">
-              <constructor-arg type="java.lang.String" index="0">
-                     <value>大众</value>
-              </constructor-arg>
-              <constructor-arg type="java.lang.String" index="1">
-                     <value>断轴</value>
-              </constructor-arg>
-              <constructor-arg type="int" index="2">
-                     <value>500</value>
-              </constructor-arg>
+              <constructor-arg type="java.lang.String" index="0" value="大众" />
+              <constructor-arg type="java.lang.String" index="1" value="断轴" />
+              <constructor-arg type="int" index="2" value="500" />
        </bean>
 
        <bean id="car4" class="com.no.learn.spring.beanAssemble.Car">
-              <constructor-arg type="java.lang.String" index="0">
-                     <value>大众</value>
-              </constructor-arg>
-              <constructor-arg type="java.lang.String" index="1">
-                     <value>断轴</value>
-              </constructor-arg>
-              <constructor-arg type="double" index="2">
-                     <value>14.5</value>
-              </constructor-arg>
+              <constructor-arg type="java.lang.String" index="0" value="大众" />
+              <constructor-arg type="java.lang.String" index="1" value="断轴" />
+              <constructor-arg type="double" index="2" value="14.5" />
        </bean>
 
        <bean id="teacher" class="com.no.learn.spring.beanAssemble.Teacher">
@@ -72,12 +42,9 @@
               <property name="cource" ref="cource" />
        </bean>
 
-
        <bean id="cource" class="com.no.learn.spring.beanAssemble.Cource">
               <property name="courceName" value="Java" />
-              <property name="teacher">
-                     <ref bean="teacher" />
-              </property>
+              <property name="teacher" ref="teacher" />
        </bean>
 
        <bean id="cource1" class="com.no.learn.spring.beanAssemble.Cource">
