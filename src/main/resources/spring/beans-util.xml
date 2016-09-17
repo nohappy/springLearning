@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+       <util:list id="productNames" value-type="java.lang.String">
+              <value>test</value>
+              <value>kaka</value>
+       </util:list>
+
+       <util:map id="productMap" key-type="java.lang.String" value-type="java.lang.Integer">
+              <entry key="test" value="123" />
+              <entry key="kaka" value="456" />
+       </util:map>
+
+       <util:set id="productSet" value-type="java.lang.Double">
+              <value>12.5</value>
+              <value>34.6</value>
+       </util:set>
+</beans>
