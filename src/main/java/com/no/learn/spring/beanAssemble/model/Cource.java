@@ -1,4 +1,4 @@
-package com.no.learn.spring.beanAssemble;
+package com.no.learn.spring.beanAssemble.model;
 
 /**
  * @author: suolongxiang  Date: 16/9/11 Time: 下午3:50

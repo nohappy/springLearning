@@ -1,4 +1,4 @@
-package com.no.learn.spring.beanAssemble;
+package com.no.learn.spring.beanAssemble.model;
 
 import java.util.Map;
 

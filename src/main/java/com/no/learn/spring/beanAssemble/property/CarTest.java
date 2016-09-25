@@ -1,7 +1,7 @@
 package com.no.learn.spring.beanAssemble.property;
 
-import com.no.learn.spring.beanAssemble.Boss;
-import com.no.learn.spring.beanAssemble.Car;
+import com.no.learn.spring.beanAssemble.model.Boss;
+import com.no.learn.spring.beanAssemble.model.Car;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

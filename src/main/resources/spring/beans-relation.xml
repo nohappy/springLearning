@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+       <bean id="staff1" class="com.no.learn.spring.beanAssemble.model.Staff" abstract="true">
+              <property name="name" value="slx" />
+       </bean>
+
+       <bean id="leader" class="com.no.learn.spring.beanAssemble.model.Leader" parent="staff1">
+              <property name="level" value="13"/>
+       </bean>
+
+       <bean id="parentLeader" class="com.no.learn.spring.beanAssemble.model.Leader">
+              <property name="name" value="zhangyuran" />
+       </bean>
+
+       <bean id="leader2" class="com.no.learn.spring.beanAssemble.model.Leader" parent="parentLeader">
+              <property name="level" value="13"/>
+       </bean>
+</beans>

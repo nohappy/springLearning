@@ -1,7 +1,7 @@
 package com.no.learn.spring.beanAssemble.constructor;
 
-import com.no.learn.spring.beanAssemble.Cource;
-import com.no.learn.spring.beanAssemble.Teacher;
+import com.no.learn.spring.beanAssemble.model.Cource;
+import com.no.learn.spring.beanAssemble.model.Teacher;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
